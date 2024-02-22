@@ -39,16 +39,24 @@
     }
     p{color: #fff;}
     body{
-        width: 100%;
+        width: 100vw;
         height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         gap:15px;
+        padding:2.5%;
+        animation:show 1.75s ease-in;
     }
+    @keyframes show{
+      from{
+        opacity:0;
+      }
+    }
+
     .containerImage{
-        width: 500px;height:500px;
+        width: 50vw;height:50vh;
         border: 1px solid;
         padding: 5%;margin:0.5% 5% 5% 5%;
     }
@@ -62,18 +70,18 @@
     }
     .addImage input{
         position: absolute;z-index: 1;opacity: 0;scale: .4;
-        padding: 2.5%;cursor: pointer;
+        padding: 2%;cursor: pointer;
     }
     .addImage img{
         scale: 2;
     }
 
     .editors{
-        width: 70vmax;height: auto;
+        width: 70vw;height: auto;
         padding: 2.5%;margin: 2.5%;
         background-color: #3b3b3b;
         display: flex;flex-direction: column;
-        
+
         gap: 20px;
         border-radius: 3px;
         filter: drop-shadow(0 0 15px grey);
@@ -84,7 +92,7 @@
     background: transparent;
     cursor: pointer;
     width: 100%;
-    margin: 2% 0%;
+    margin: 3% 0%;
 }
 
 /* Removes default focus */
@@ -103,7 +111,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
    appearance: none;
-   margin-top: -12px; /* Centers thumb on the track */
+   margin-top: -7px; /* Centers thumb on the track */
    background-color:#fff;
    height: 2rem;
    width: 1rem;border-radius: 2px;
@@ -138,7 +146,7 @@ input[type="range"]:focus::-moz-range-thumb {
 
 input[type="checkbox"]{
     accent-color: lime;
-    scale: 2.5;
+    scale: 1.5;
 }
 .checkboxs{
     color: #fff;
@@ -152,6 +160,7 @@ button{
 button:hover{
     background-color: lime;color: black;
 }
+
 </style>
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 <script defer>
